@@ -15,11 +15,22 @@ if (Meteor.is_client) {
   Template.option.events = {
     'click .title' : function () {
       if ( Session.equals("voted", true) ) {
-        alert("You already voted!");
+        alert("Na koho to skúšaš, chlapec?");
       }
       else {
         Options.update(this._id, {$inc: {votes: 1}});
         Session.set("voted", true);
+      }
+    }
+  };
+
+  Template.panel.events = {
+    'click .reset' : function () {
+      if ( prompt('Že heslo?')==='cislo kleslo' ) {
+        Options.find().forEach(function(item) {
+          Options.update(item._id, {$set: {votes: 0}});
+        });
+        Session.set("voted", false);
       }
     }
   };

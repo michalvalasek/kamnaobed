@@ -66,3 +66,10 @@ body {
 .yellow { background-color: #F4A209; border-bottom: 1px solid #FFC229; }
 .yellow .title { color: #fff; }
 .grey { background-color: #ddd; border-bottom: 1px solid #fff; }
+
+#panel {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	text-align: right;
+}

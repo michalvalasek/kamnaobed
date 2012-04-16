@@ -9,6 +9,7 @@
       <p>Hlasuj kliknutím na názov podniku!</p>
     </div>
     {{> board}}
+    {{> panel}}
   </div>
 </body>
 
@@ -24,5 +25,11 @@
   <div class="option {{color}}">
     <span class="title">{{title}}</span>
     <span class="votes">{{votes}}</span>
+  </div>
+</template>
+
+<template name="panel">
+  <div id="panel">
+    <input type="button" class="reset" value="reset" />
   </div>
 </template>
