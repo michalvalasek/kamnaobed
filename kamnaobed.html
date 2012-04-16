@@ -1,0 +1,28 @@
+<head>
+  <title>Kam na obed?</title>
+</head>
+
+<body>
+  <div id="outer">
+    <div id="header">
+      <h1>Kam na obed?</h1>
+      <p>Hlasuj kliknutím na názov podniku!</p>
+    </div>
+    {{> board}}
+  </div>
+</body>
+
+<template name="board">
+  <div id="board">
+    {{#each options}}
+      {{> option}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="option">
+  <div class="option {{color}}">
+    <span class="title">{{title}}</span>
+    <span class="votes">{{votes}}</span>
+  </div>
+</template>

@@ -1,0 +1,68 @@
+/* CSS declarations go here */
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, san-serif;
+    font-weight: 200;
+    color: #333;
+    margin: 50px 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    background: #eee;
+}
+
+#outer {
+    width: 600px;
+    margin: 0 auto;
+}
+
+#header {
+	margin-top: 24px;
+}
+#header h1 {
+	font-size: 56px;
+	margin: 0;
+}
+
+#board {
+	border: 3px solid #bbb;
+}
+
+.option {
+	height: 54px;
+	/*background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ddd));*/
+	padding: 12px;
+}
+
+.option .title {
+	display: block;
+	width: 510px;
+	float: left;
+	font-size: 46px;
+	color: #111;
+}
+
+.option .votes {
+	display: block;
+	float: right;
+	width: 52px;
+	height: 50px;
+	font-size: 46px;
+	background: #fff;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	text-align: center;
+	vertical-align: middle;
+	padding-bottom: 5px;
+}
+
+.red { background-color: #D33319; border-bottom: 1px solid #F35339; }
+.red .title { color: #eee; }
+.orange { background-color: #F75F07; border-bottom: 1px solid #FF7F27; }
+.orange .title { color: #eee; }
+.yellow { background-color: #F4A209; border-bottom: 1px solid #FFC229; }
+.yellow .title { color: #fff; }
+.grey { background-color: #ddd; border-bottom: 1px solid #fff; }
