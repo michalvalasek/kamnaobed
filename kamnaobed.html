@@ -25,6 +25,11 @@
   <div class="option {{color}}">
     <span class="title">{{title}}</span>
     <span class="votes">{{votes}}</span>
+    {{#if link}}
+    <span class="link"><a href="{{link}}" title="Zobraziť menu" target="_blank">Pozri si menu<a/></link>
+    {{else}}
+    <span class="link">Spýtaj sa</span>
+    {{/if}}
   </div>
 </template>
 

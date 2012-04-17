@@ -39,9 +39,14 @@ if (Meteor.is_client) {
 if (Meteor.is_server) {
   Meteor.startup(function () {
     if (Options.find().count() === 0) {
-      var titles = ["Český Budík", "Furman", "Diana", "BLUE*S"];
-      for (var i=0; i<titles.length; i++) {
-        Options.insert({title: titles[i], votes: 0});
+      var venues = [
+        {name: "Český Budík"},
+        {name: "Furman", link: "http://furman.sk/"},
+        {name: "Diana", link: "http://diana.sk/Downloads/denne-menu-en.pdf"},
+        {name: "BLUE*S", link: "http://blue-s.sk/"}
+      ];
+      for (var i=0; i<venues.length; i++) {
+        Options.insert({title: venues[i].name, link: venues[i].link, votes: 0});
       }
     }
   });
